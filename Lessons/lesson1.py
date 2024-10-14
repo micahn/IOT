@@ -19,14 +19,14 @@ f"Hi Everyone, {'Hello World'}" #Format String
 {"name":"Sun","mass":1.989e30} # Dictionary
 
 #Arithmetic operations
-2+3  # add
-2-3  # subtract
-2*3  # multiply
-2/3  # float divide
-7//3 # integer divide
-2**3 # power
-2%3  # modulus
-5*3+8**2-30 # PEMDAS
+2 + 3  # add
+2 - 3  # subtract
+2 * 3  # multiply
+2 / 3  # float divide
+7 // 3 # integer divide
+2 ** 3 # power
+2 % 3  # modulus
+5 * 4 + 8 ** 2 - 4*11 # PEMDAS
 
 
 #Bitwise operations
@@ -101,7 +101,6 @@ def fun():
     pass
 
 fun() # call defined function.
-
 
 
 #Classes
