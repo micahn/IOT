@@ -26,7 +26,7 @@ f"Hi Everyone, {'Hello World'}" #Format String
 7 // 3 # integer divide
 2 ** 3 # power
 2 % 3  # modulus
-5 * 4 + 8 ** 2 - 4*11 # PEMDAS
+5 * 8 / 2 + 8 ** 2 - 4 * 11 + 2# PEMDAS
 
 
 #Bitwise operations
@@ -97,10 +97,10 @@ for i in range(25):
 x = range(20)
 
 # define a function
-def fun():
-    pass
+def fun(x):
+    return x + 1
 
-fun() # call defined function.
+fun(5) # call defined function.
 
 
 #Classes
