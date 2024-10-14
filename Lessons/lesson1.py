@@ -18,7 +18,7 @@ f"Hi Everyone, {'Hello World'}" #Format String
 (2,3,4)     # Tuple
 {"name":"Sun","mass":1.989e30} # Dictionary
 
-#Arithmatic operations
+#Arithmetic operations
 2+3  # add
 2-3  # subtract
 2*3  # multiply
