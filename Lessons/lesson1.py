@@ -8,10 +8,14 @@
 True  # 1
 None  # Null,Nil,Nothing
 False # 0
+
+
 10      #Int
 11.35   #Float
 3e-10   #FLoat
 3+8.5j  #Complex
+
+
 "Hello World" #String
 f"Hi Everyone, {'Hello World'}" #Format String
 [1,2,3,4,5] # List
@@ -45,8 +49,10 @@ f"Hi Everyone, {'Hello World'}" #Format String
 4 >= 4    # Greater Than or Equal
 1 <= 18   # Less Than or Equal
 not False #  Negate
+
 x = 5
 b = x
+
 b is x    # Check object equality
 3 in [1,2,3,4] # Check membership
 
