@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pico W Info</title>
+  <style>
+    body { font-family: sans-serif; padding: 1em; }
+    #info { margin-top: 1em; }
+    dt { font-weight: bold; }
+    dd { margin: 0 0 1em 1em; }
+  </style>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+  <h1>Pico W System Info</h1>
+  <div id="info">
+    <dl>
+      <dt>IP Address:</dt><dd id="ip">…loading…</dd>
+      <dt>Subnet:</dt><dd id="subnet">…loading…</dd>
+      <dt>Gateway:</dt><dd id="gateway">…loading…</dd>
+      <dt>DNS:</dt><dd id="dns">…loading…</dd>
+      <dt>Tempurature:</dt><dd id="temp">…loading…</dd>
+    </dl>
+    <button onclick="refresh()">Refresh</button>
+    <button onclick="location.href='fire.html'">Fire</button>
+  </div>
+
+  <script>
+    async function refresh() {
+      try {
+        const resp = await fetch('/info');
+        if (!resp.ok) throw new Error(resp.statusText);
+        const data = await resp.json();
+        document.getElementById('ip').textContent = data.ip;
+        document.getElementById('subnet').textContent = data.netmask;
+        document.getElementById('gateway').textContent = data.gateway;
+        document.getElementById('dns').textContent = data.dns;
+        document.getElementById('temp').textContent = data.temp;
+      } catch (err) {
+        document.getElementById('info').textContent = 'Error: ' + err;
+      }
+    }
+
+    // Fetch info on initial load
+    refresh();
+  </script>
+</body>
+</html>
+
